@@ -1,0 +1,27 @@
+server:
+  port: 5003
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:pr_review_db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # auto create tables
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+azure:
+  devops:
+    base-url: http://test:8080
+    collection: DefaultCollection
+    project: test
+    repo-id: test
+    pat: test
